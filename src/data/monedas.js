@@ -1,0 +1,11 @@
+
+    const monedas = [
+        {id: 'DOP', nombre: 'Peso Dominicano'},
+        {id: 'USD', nombre: 'Dolar de Estados Unidos'},
+        {id: 'EUR', nombre: 'Euro'},
+        {id: 'GBP', nombre: 'Libra Esterlina'},
+    ]
+
+    export {
+        monedas
+    }

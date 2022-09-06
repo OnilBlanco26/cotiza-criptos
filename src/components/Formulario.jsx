@@ -1,11 +1,22 @@
 import { useState, useEffect } from "react";
 import styled from "@emotion/styled";
-import Error from './Error'
+import Error from "./Error";
 import useSelectMonedas from "../hooks/useSelectMonedas";
 import { monedas } from "../data/monedas";
 
 const InputSubmit = styled.input`
-  background-color: #9497ff;
+  background: #8e0e00; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #1f1c18,
+    #8e0e00
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #1f1c18,
+    #8e0e00
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   border: none;
   width: 100%;
   padding: 10px;
@@ -16,18 +27,17 @@ const InputSubmit = styled.input`
   border-radius: 5px;
   transition: background-color 0.5s ease-in-out;
   margin-top: 30px;
-  box-shadow: #9497ff 2px 7px 7px;
- 
+  box-shadow: #8e0e00 2px 7px 7px;
 
   &:hover {
     transition: all 0.5s;
-    background-color: #7a7dfe;
-    box-shadow: #9497ff 1px 1px 5px;
+    background-color: #fff;
+    box-shadow: #fff 1px 1px 5px;
     cursor: pointer;
   }
 `;
 
-const Formulario = ({setMonedas}) => {
+const Formulario = ({ setMonedas }) => {
   const [criptos, setCriptos] = useState([]);
   const [error, setError] = useState(false);
 
@@ -66,9 +76,9 @@ const Formulario = ({setMonedas}) => {
     }
     setError(false);
     setMonedas({
-        moneda,
-        criptomoneda
-    })
+      moneda,
+      criptomoneda,
+    });
   };
 
   return (

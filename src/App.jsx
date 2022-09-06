@@ -36,9 +36,9 @@ const Heading = styled.h1`
 
   &::after{
     content: '';
-    width: 100px;
+    width: full;
     height: 6px;
-    background-color: #66a2ff;
+    background-color: #8e0e00;
     display: block;
     margin: 10px auto 0 auto;
   }
